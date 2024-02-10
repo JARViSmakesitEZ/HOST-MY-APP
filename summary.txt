@@ -1,0 +1,21 @@
+what does vercel do?
+:: one of the biggest cloud providers today
+:: lets you deploy your application on the internet with a very minimal effort
+:: vercel is a website where you can go , signup , link your github and then it lets you deploy your projects on the internet in a single click
+:: vercel gives you a final unique url via which you can access the website
+:: heavily rely on AWS constructs
+
+:: we used the blog post "behind the scenes of vercel's infrastructure" to build it
+
+What we are building?
+VERCEL ARCHITECTURE
+
+:: upload service:upload the user code to vercel systems , make sure that whatever url you got from the user , you copy over all the source code over to your own systems , so that you have a good local copy of the project that the user wants to deploy.
+
+:: deployment service:Build and deploy the project , build means converting the React project into HTML , CSS and JS , deploy means putting these html,css,js files somewhere so that other users can access them when they try to hit this website
+
+:: Request handler service:users from all around the world will now try to access the files via the unique url we will be providing them , we need to handle those requests and return html,css and js code.
+
+:: the upload and deployment services are sort of prerequisites of the requests handler service because until the project has been uploaded to vercel systems and been deployed or built , u cannot actually handle the reuqest.
+
+:: 
