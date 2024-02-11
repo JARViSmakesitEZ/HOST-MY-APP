@@ -1,12 +1,11 @@
-//access key:AKIAYFCBHN5FOEVUZJBK
-//secret access key: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
+
 
 import { S3 } from "aws-sdk";
 import fs from "fs";
 
 const s3 = new S3({
-  accessKeyId: "AKIAYFCBHN5FOEVUZJBK",
-  secretAccessKey: "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",
+  accessKeyId: //ACCESS KEY ID",
+  secretAccessKey: //SECRET ACCESS KEY,
 });
 
 export const uploadFile = async (fileName: string, localFilePath: string) => {
